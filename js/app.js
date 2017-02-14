@@ -13,4 +13,4 @@ var ViewModel = function() {
 	}
 }
 
-ko.applyBindings
+ko.applyBindings(new ViewModel());
