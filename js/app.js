@@ -1,4 +1,15 @@
 var ViewModel = function() {
+
+	this.incrementCounter = function() {
+		this.clickCount(this.clickCount() + 1);
+	};
+
+}
+
+ko.applyBindings(new ViewModel());
+
+
+var Dalmatian = function() {
 	//Create and set count to zero
 	this.clickCount = ko.observable(0);
 	//Create Dal name
@@ -10,13 +21,7 @@ var ViewModel = function() {
 	//Add increment counter
 	this.nicknames = ko.observableArray(['Cutie', 'Dotty', 'Bug', 'Spots']);
 
-
-	this.incrementCounter = function() {
-		this.clickCount(this.clickCount() + 1);
-	};
-
+	
 
 
 }
-
-ko.applyBindings(new ViewModel());
