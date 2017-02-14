@@ -8,10 +8,15 @@ var ViewModel = function() {
 	//Add image attribution
 	this.imgAttribution = ko.observable('https://flic.kr/p/dP1PF4');
 	//Add increment counter
+	this.nicknames = ko.observableArray(['Cutie', 'Dotty', 'Bug', 'Spots']);
+
+
 	this.incrementCounter = function() {
 		this.clickCount(this.clickCount() + 1);
 	};
-	
+
+
+
 }
 
 ko.applyBindings(new ViewModel());
