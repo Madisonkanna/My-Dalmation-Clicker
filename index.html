@@ -11,12 +11,12 @@
         <h2 data-bind="text: currentDalmatian().name"></h2>
         <h3 data-bind="text: currentDalmatian().title"></h3>
         <div data-bind="text: currentDalmatian().clickCount"></div>
-        <img src="" alt="sweet dalmatian" data-bind="click: incrementCounter, attr: {src: currentDalmation().imgSrc}">
+        <img src="" alt="sweet dalmatian" data-bind="click: incrementCounter, attr: {src: currentDalmatian().imgSrc}">
     </div>
     <div>
         <h3>Nicknames:</h3>
         <ul data-bind="foreach: currentDalmatian().nicknames">
-            <li data-bind="text: %data"></li>
+            <li data-bind="text: $data"></li>
         </ul>
     </div>
 
