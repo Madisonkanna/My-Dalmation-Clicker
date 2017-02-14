@@ -22,8 +22,8 @@ var Dalmatian = function() {
 	this.nicknames = ko.observableArray(['Cutie', 'Dotty', 'Bug', 'Spots']);
 
 	this.title = ko.computed(function() {
-		var tite;
-		var clicks = this.clickCount() {
+		var title;
+		var clicks = this.clickCount() 
 			if (clicks < 10) {
 				title = 'Newborn';
 			} else if (clicks < 50) {
