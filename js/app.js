@@ -4,8 +4,13 @@ var ViewModel = function() {
 	//Create Dal name
 	this.name = ko.observable('Gatsby');
 	//Add image
-	this.imgSrc= jo.observable('img/dalmatian.jpg');
+	this.imgSrc= ko.observable('img/dalmatian.jpg');
+	//Add image attribution
+	this.imgAttribution = ko.observable('https://flic.kr/p/dP1PF4');
+	//Add increment counter
 	this.incrementCounter = function() {
 
 	}
 }
+
+ko.applyBindings
