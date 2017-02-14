@@ -9,8 +9,9 @@ var ViewModel = function() {
 	this.imgAttribution = ko.observable('https://flic.kr/p/dP1PF4');
 	//Add increment counter
 	this.incrementCounter = function() {
-
-	}
+		this.clickCount(this.clickCount() + 1);
+	};
+	
 }
 
 ko.applyBindings(new ViewModel());
