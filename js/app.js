@@ -1,14 +1,3 @@
-var ViewModel = function() {
-
-	this.incrementCounter = function() {
-		this.clickCount(this.clickCount() + 1);
-	};
-
-}
-
-ko.applyBindings(new ViewModel());
-
-
 var Dalmatian = function() {
 	//Create and set count to zero
 	this.clickCount = ko.observable(0);
@@ -23,7 +12,7 @@ var Dalmatian = function() {
 
 	this.title = ko.computed(function() {
 		var title;
-		var clicks = this.clickCount() 
+		var clicks = this.clickCount(); 
 			if (clicks < 10) {
 				title = 'Newborn';
 			} else if (clicks < 50) {
@@ -39,3 +28,15 @@ var Dalmatian = function() {
 		}, this);
 
 }
+
+
+var ViewModel = function() {
+	this.currentDalmatian = ko.observable( new Dalmation() );
+
+	this.incrementCounter = function() {
+		this.clickCount(this.clickCount() + 1);
+	};
+
+}
+
+ko.applyBindings(new ViewModel());
