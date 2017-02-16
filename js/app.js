@@ -33,9 +33,9 @@ var ViewModel = function() {
 	this.currentDalmatian = ko.observable( new Dalmatian() );
 
 	this.incrementCounter = function() {
-		this.currentDalmatian().clickCount(this.currentDalmatian().clickCount() + 1);
+		this.clickCount(this.clickCount() + 1);
 	};
 
-}
+};
 
 ko.applyBindings(new ViewModel());
