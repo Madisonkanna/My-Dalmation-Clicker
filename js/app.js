@@ -33,7 +33,7 @@ var ViewModel = function() {
 	this.currentDalmatian = ko.observable( new Dalmatian() );
 
 	this.incrementCounter = function() {
-		this.clickCount(this.clickCount() + 1);
+		this.currentDalmatian().clickCount(this.currentDalmatian().clickCount() + 1);
 	};
 
 }
