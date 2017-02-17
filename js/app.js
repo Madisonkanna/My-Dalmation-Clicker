@@ -1,14 +1,14 @@
 var Dalmatian = function(data) {
 	//Create and set count to zero
-	this.clickCount = ko.observable(0);
+	this.clickCount = ko.observable(data.clickCount);
 	//Create Dal name
-	this.name = ko.observable('Gatsby');
+	this.name = ko.observable(data.name);
 	//Add image
-	this.imgSrc= ko.observable('img/dalmatian.jpg');
+	this.imgSrc= ko.observable(data.imgSrc);
 	//Add image attribution
-	this.imgAttribution = ko.observable('https://flic.kr/p/dP1PF4');
+	this.imgAttribution = ko.observable(data.imgAttribution);
 	//Add increment counter
-	this.nicknames = ko.observableArray(['Cutie', 'Dotty', 'Bug', 'Spots']);
+	this.nicknames = ko.observableArray(data.nicknames);
 
 	this.title = ko.computed(function() {
 		var title;
