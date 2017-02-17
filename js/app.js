@@ -10,7 +10,7 @@ var initialDalmatians = [
 		clickCount : 0,
 		name : 'Nova',
 		imgSrc : 'img/dalmatian2.jpg',
-		imgAttibution : 'https://flic.kr/p/R2h56f'
+		imgAttibution : 'https://flic.kr/p/R2h56f',
 		nicknames: ['Old pal']
 	},
 	{
