@@ -1,4 +1,4 @@
-var Dalmatian = function() {
+var Dalmatian = function(data) {
 	//Create and set count to zero
 	this.clickCount = ko.observable(0);
 	//Create Dal name
@@ -30,7 +30,14 @@ var Dalmatian = function() {
 }
 
 var ViewModel = function() {
-	this.currentDalmatian = ko.observable( new Dalmatian() );
+	this.currentDalmatian = ko.observable( new Dalmatian({
+		clickCount: 0,
+		name: 'Gatsby',
+		imgSrc: 'img/dalmatian/jpg',
+		imgAttribution: 'https://flic.kr/p/dP1PF4',
+		nickname: ['Cutie', 'Dotty', 'Bug', 'Spots']
+
+	}) );
 
 	this.incrementCounter = function() {
 		this.clickCount(this.clickCount() + 1);
