@@ -2,14 +2,23 @@ var initialDalmatians = [
 	{
 		clickCount : 0,
 		name : 'Gatsby',
-		imgSrc : 'img/dalmatian2.jpg',
-		imgAttibution : 'https://flic.kr/p/7wAPfh'
+		imgSrc : 'img/dalmatian.jpg',
+		imgAttibution : 'https://flic.kr/p/7wAPfh',
+		nicknames: ['Old pal', 'Spotty', 'Dotty']
 	},
 	{
 		clickCount : 0,
-		name : 'Nova'
+		name : 'Nova',
+		imgSrc : 'img/dalmatian2.jpg',
+		imgAttibution : 'https://flic.kr/p/R2h56f'
+		nicknames: ['Old pal', 'Spotty', 'Dotty']
+	},
+	{
+		clickCount : 0,
+		name : 'Lyra',
 		imgSrc : 'img/dalmatian3.jpg',
-		imgAttibution : 'https://flic.kr/p/cNLRq7'
+		imgAttribution : 'https://flic.kr/p/cNLRq7',
+		nicknames: ['Cutie']
 	}
 
 ]
@@ -56,14 +65,7 @@ var ViewModel = function() {
 		self.dalmatianList.push( new Dalmatian(dalmatianItem) );
 	})
 
-	this.currentDalmatian = ko.observable( new Dalmatian({
-		clickCount: 0,
-		name: 'Gatsby',
-		imgSrc: 'img/dalmatian/jpg',
-		imgAttribution: 'https://flic.kr/p/dP1PF4',
-		nickname: ['Cutie', 'Dotty', 'Bug', 'Spots']
-
-	}) );
+	this.currentDalmatian = ko.observable( this.catList() [0] );
 
 	this.incrementCounter = function() {
 		self.currentDalmatian().clickCount(self.currentDalmatian().clickCount() + 1);
