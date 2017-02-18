@@ -7,7 +7,7 @@
 <body>
 
     <ul data-bind="foreach: dalmatianList">
-        <li data-bind="text: name"></li>
+        <li data-bind="text: name, click: $parent.setDalmatian"></li>
     </ul>
 
     <div data-bind="with:currentDalmatian">

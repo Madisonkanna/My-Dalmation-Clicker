@@ -71,6 +71,10 @@ var ViewModel = function() {
 		self.currentDalmatian().clickCount(self.currentDalmatian().clickCount() + 1);
 	};
 
+	this.setDalmatian = function(clickedDalmatian) {
+		self.currentDalmatian(clickedDalmatian);
+	}
+
 };
 
 ko.applyBindings(new ViewModel());
