@@ -6,6 +6,7 @@
 </head>
 <body>
     <h1>My Dalmatian App</h1>
+    <button onclick="removeButton()">Remove</button>
     <ul data-bind="foreach: dalmatianList">
         <li data-bind="text: name, click: $parent.setDalmatian"></li>
     </ul>
@@ -15,7 +16,7 @@
         <h2 data-bind="text: name"></h2>
         <h3 data-bind="text: title"></h3>
         <div data-bind="text: clickCount"></div>
-        <img src="" alt="sweet dalmatian" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
+        <img id="dalmatianPic" src="" alt="sweet dalmatian" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
         <div>
             <h3>Nicknames:</h3>
             <ul data-bind="foreach: nicknames">
@@ -23,6 +24,9 @@
             </ul>
         </div>
     </div>
+
+
+
 
 
     <script src="js/lib/knockout-3.2.0.js"></script>
