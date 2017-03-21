@@ -55,6 +55,11 @@ var Dalmatian = function(data) {
 
 }
 
+
+function removeButton() {
+	document.getElementById("dalmatianPic").remove();
+}
+
 var ViewModel = function() {
 	var self = this;
 
